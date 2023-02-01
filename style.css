@@ -1,6 +1,29 @@
+:root{
+    --primary-color: #d70f64;
+
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
     font-family: 'Open Sans','Courier New', Courier, monospace;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; /*relative unit 1rem = 16px */
+}
+nav.active {
+    box-shadow: 0 2px 16px gray;
+}
+nav > .logo {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 600px;
+}
+nav > svg{
+    cursor: pointer;
 }
