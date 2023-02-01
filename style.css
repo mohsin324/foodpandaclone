@@ -49,6 +49,75 @@ nav .login-btn{
     margin-left: 0.5rem;
     font-weight: 600;
 }
+/* Hero section */
+section.hero{
+    padding: 0 1rem;
+    height: 320px;
+    border: 2px solid transparent;
+    position: relative;
+}
+.hero > h3{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 9rem;
+    min-width: 220px;
+    width: 70%;
+}
+.hero .bg-wrapper{
+    /* border: 2px solid black; */
+    position: absolute;
+    width: 33%;
+    /* right: 0; */
+    margin-left: 67%;
+    max-height: 335px;
+    float: right;
+    background: url('./Images/heero.png');
+    background-repeat: no-repeat;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+}
+.hero .actions{
+    margin-top: 4rem;
+}
+.actions .input-container{
+    position: relative;
+}
+.actions input{
+    width: 100%;
+    padding: 1.5rem 1rem;
+    border: none; /* border 1px solid #dcdcdc */
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    color: #333;
+    font-size: 0.9rem;
+}
+.actions input::placeholder{
+    color: darkgray;
+}
+.input-container > svg{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+.actions .button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+.button-container button{
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0 5rem;
+    height: 64px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    cursor: pointer;
+}
 /* media query */
 @media screen and (min-width: 768px) {
     nav > .logo > svg {
