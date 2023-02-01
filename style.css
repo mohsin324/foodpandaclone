@@ -1,6 +1,6 @@
 :root{
     --primary-color: #d70f64;
-
+    --gray: rgba(128, 128, 128, 0.208);
 }
 *{
     margin: 0;
@@ -14,16 +14,53 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem; /*relative unit 1rem = 16px */
+    padding: 0 1.4rem; /*relative unit 1rem = 16px */
 }
 nav.active {
     box-shadow: 0 2px 16px gray;
 }
 nav > .logo {
+    padding: 1rem 0;
     color: var(--primary-color);
     font-size: 1.6rem;
     font-weight: 600px;
+    display: flex;
+    align-items: center;
+}
+nav > .logo > svg{
+    margin-right: 0.3rem;
+    display: none;
 }
 nav > svg{
     cursor: pointer;
+}
+nav .login-btn{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: transparent ;
+    border: none;
+    border-right: 1px solid var(--gray);
+    border-left: 1px solid var(--gray);
+    padding: 1.2rem;
+}
+.login-btn span{
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+/* media query */
+@media screen and (min-width: 768px) {
+    nav > .logo > svg {
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 960px){
+    nav > .profile-icon-medium {
+        display: none;
+    }
+    nav .login-btn{
+        display: inline-flex;
+    }
 }
