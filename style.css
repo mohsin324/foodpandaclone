@@ -9,10 +9,13 @@
 }
 body{
     font-family: 'Open Sans','Courier New', Courier, monospace;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
 }
 .max-w-xl{
     max-width: 1300px;
     margin: 0 auto;
+    position: relative;
 }
 nav{
     display: flex;
@@ -119,6 +122,170 @@ section.hero{
     font-weight: 300;
     cursor: pointer;
 }
+/* partners section */
+.partners{
+    margin: 4rem 0;
+    position: relative;
+}
+.backdropText{
+    padding: 0 2rem;
+    font-size: 4.5rem;
+    color: rgba(188, 186, 186, 0.12);
+    font-weight: 900;
+    position: absolute;
+    top: -40px;
+    left: -10px;
+    z-index: -2;
+
+
+}
+.partners .caption{
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+
+}
+.partners .backgroundImage{
+    background: url('./Images/home-vendor-pk.png');
+    max-height: 100%;
+    min-height: 280px;
+    background-size: cover;
+    z-index: -1;
+    background-position: center;
+}
+.content{
+    box-shadow: 0 0 10px gray;
+    padding: 0 2rem;
+    margin: 0 1rem;
+    padding: 1rem 2rem;
+    margin-top: -4rem;
+    background-color: white;
+}
+.content p{
+    font-size: 0.9rem;
+    color: rgb(176, 174, 174);
+
+}
+.headerText{
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: rgb(18, 17, 17);
+}
+.content button{
+
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary-color) ;
+    border: none;
+    border-right: 1px solid var(--gray);
+    border-left: 1px solid var(--gray);
+    padding: 1.2rem;
+    border-radius: 10px;
+    color: white;
+}
+/* Cities section */
+.cities{
+    margin-top: 8rem;
+}
+.cities .container{
+    display: flex;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    padding: 1rem;
+}
+.container .card{
+    border: 2px solid red;
+    height: 272px;
+    min-width: 230px;
+    max-width: 230px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 1rem;
+    margin-top: 1rem;
+
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+}
+.card img:hover{
+    transform: scale(1.3);
+    transition: all 0.3s ease;
+}
+.card p{
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    left: 30px;
+}
+/* App section */
+.app{
+    margin-top: 10rem;
+}
+.app .caption{
+    display: none;
+}
+.app .backdropText{
+    z-index: 1;
+}
+ .app .container{
+    background-color: #e21b70;
+    min-height: 485px;
+    z-index: -1;
+ }
+ .container .max-w-xl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+ }
+ .container .image-Container{
+    position: relative;
+    max-width: 424px;
+    min-height: 250px;
+    width: 100%;
+    text-align: center;
+ }
+ .image-Container img{
+    position: absolute;
+    width: 100%;
+    max-width: 424px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    top: -80px;
+ }
+ .content .content-container{}
+ .content-container .sub-heading{
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+ }
+ .content-container .text{
+    font-size: 0.9rem;
+    margin: 1rem 0;
+
+ }
+ .content-container .buttons-container{
+    display: flex;
+    justify-content: center;
+
+ }
+ .buttons-container .center-svg{
+    margin: 0  1rem;
+ }
+
 /* media query */
 @media screen and (min-width: 768px) {
     nav > .logo > svg {
@@ -154,6 +321,70 @@ section.hero{
         align-items: center;
         margin-left: 1rem;
     }
+    /* Partners */
+    .partners {
+        margin-top: 10rem;
+    }
+    .partners .backdropText{
+        padding: 0 3rem;
+        
+    }
+    .partners .caption{
+        padding: 0 3rem;
+    }
+    .partners .backgroundImage{
+        min-height: 404px;
+    }
+    .partners .content{
+        margin: 0 3rem;
+        margin-top: -20rem;
+        max-width: 350px;
+        padding: 2rem;
+    }
+    .content p{
+        font-size: 1rem;
+    }
+    .content .headerText{
+        font-size: 1.5rem;
+    }
+    .content button{
+        font-size: 1.2rem;
+    }
+    /* App section */
+    .app .container{
+        min-height: 314px;
+    }
+    .app .caption{
+        display: block;
+        color: red;
+    }
+    .container .max-w-xl{
+        flex-direction: row-reverse;
+    }
+    .container .content-Container{
+        width: 55%;
+        text-align: left;
+        margin-right: auto;
+        justify-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+    }
+    .container .image-Container{
+        width: 45%;
+        text-align: right;
+        max-height: 480px;
+    }
+    .image-Container img{
+        min-width: 500px;
+    }
+    .content-container .sub-heading{
+        font-size: 1.8rem;
+
+    }
+    .content-container .buttons-container{
+        margin-top: 1rem;
+    }
 }
 
 
@@ -167,6 +398,28 @@ section.hero{
     .hero .bg-wrapper{
         max-height: 400px;
     }
+    /* Partners section */
+    .partners .content{
+        max-width: 450px;
+    }
+    /* Cities section */
+    .cities .container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    /* App section */
+    .app .container{
+        padding: 0 2rem;
+
+    }
+    .image-Container img{
+        min-width: 600px;
+    }
+    .content-container .buttons-container{
+        margin-top: 2rem;
+    }
 }
 @media screen and (min-width: 1264px){
     .hero .bg-wrapper{
@@ -174,6 +427,27 @@ section.hero{
     }
     .hero h3{
         font-size: 2.8rem;
+    }
+    /* Partners section */
+    .partners .content{
+        max-width: 600px;
+        text-align: right;
+
+    }
+    .content button{
+        max-width: 240px;
+        margin-top: 2rem;
+    }
+    .content p{
+        text-align: left;
+    }
+    .partners .backdropText{
+        font-size: 10rem;
+        top: -100px;
+        left: -40px;
+    }
+    .partners .caption{
+        font-size: 1.5rem;
     }
 }
 @media screen and (min-width: 1440px){
